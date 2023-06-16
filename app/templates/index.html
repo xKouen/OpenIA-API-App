@@ -9,4 +9,12 @@
     <button type="submit" class="btn btn-primary mt-3">Traducir</button>
 </form>
 
+{% if response %}
+
+<div>
+    {{ response | safe }}
+</div>
+
+{% endif %}
+
 {% endblock content %}

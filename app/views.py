@@ -13,7 +13,7 @@ def chatbot(request):
 
         response = openai.Completion.create(
             model="text-davinci-003",
-            prompt=request.POST.get('user_input'),
+            prompt= f"Traslate this text to spanish: \n {request.POST.get('user_input')}",
             max_tokens=256,
             stop=".",
             temperature=0.5,
